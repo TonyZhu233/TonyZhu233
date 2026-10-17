@@ -18,11 +18,13 @@ An educational workflow that connects a target-trial protocol to a SQL cohort an
 Start with the [study protocol](https://github.com/TonyZhu233/target-trial-emulation-lab/blob/main/PROTOCOL.md), then explore the [analysis](https://github.com/TonyZhu233/target-trial-emulation-lab/blob/main/src/tte_lab.py) and [reproducibility check](https://github.com/TonyZhu233/target-trial-emulation-lab/blob/main/tests/test_tte_lab.py). The example uses synthetic data; its results do not establish a treatment effect in real patients.
 
 ### [Health Evidence Agent](https://github.com/TonyZhu233/health-evidence-agent)
-**Python · Structured evidence synthesis · Citation-ID validation**
+**Python · PubMed + BM25 retrieval · Source-quote checks · Synthetic evaluation**
 
-A prototype that turns a supplied research question and study abstracts into a structured report with claim-level evidence IDs, certainty labels, and limitations. Validation rejects missing or unknown citation IDs.
+A research-evidence workflow with PubMed abstract retrieval, local BM25 reranking, claim-level source excerpts, and a side-by-side review packet. A free extractive demo runs offline; structured model synthesis is optional.
 
-Explore the [implementation](https://github.com/TonyZhu233/health-evidence-agent/blob/main/agent.py), [synthetic example](https://github.com/TonyZhu233/health-evidence-agent/blob/main/examples/synthetic_evidence.json), and [tests](https://github.com/TonyZhu233/health-evidence-agent/blob/main/tests/test_agent.py). Citation-ID validation checks references, not whether a study supports a claim; retrieval and broader accuracy evaluation remain planned extensions.
+Explore the [demo report](https://github.com/TonyZhu233/health-evidence-agent/blob/main/results/demo/REPORT.md), [synthetic evaluation](https://github.com/TonyZhu233/health-evidence-agent/blob/main/results/evaluation/REPORT.md), and [implementation](https://github.com/TonyZhu233/health-evidence-agent/blob/main/agent.py). Local checks validate report structure, supplied source IDs, and quote locations in cited abstracts.
+
+Quote-location checks do not prove semantic support or clinical validity. Evaluation uses authored synthetic cases, and [live-model validation remains pending](https://github.com/TonyZhu233/health-evidence-agent/blob/main/docs/VALIDATION.md).
 
 ## Background
 
